@@ -12,9 +12,15 @@
       ]
     },
     "build-storybook": {
+      "dependsOn": [
+        "dependencies"
+      ],
       "outputs": [
         "storybook-static/**"
       ]
+    },
+    "dependencies": {
+      "dependsOn": ["^dependencies"]
     },
     "prebuild": {},
     "lint": {},
