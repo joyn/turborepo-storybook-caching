@@ -1,0 +1,25 @@
+{
+  "name": "monorepo storybook",
+  "description": "Our \"problematic\" storybook package",
+  "dependencies": {
+    "apps-a": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.8",
+    "@storybook/addon-interactions": "^7.6.8",
+    "@storybook/addon-links": "^7.6.8",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.8",
+    "@storybook/nextjs": "^7.6.8",
+    "@storybook/react": "^7.6.8",
+    "@storybook/test": "^7.6.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.8"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006 -c ./",
+    "build-storybook": "storybook build -c ./ && pnpm run move-storybook",
+    "move-storybook": "mv ./storybook-static ../../apps/apps-a/public/storybook"
+  }
+}

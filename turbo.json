@@ -2,8 +2,19 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["prebuild", "^build"],
-      "outputs": ["output-file.txt", "dist/**"]
+      "dependsOn": [
+        "prebuild",
+        "^build"
+      ],
+      "outputs": [
+        "output-file.txt",
+        "dist/**"
+      ]
+    },
+    "build-storybook": {
+      "outputs": [
+        "storybook-static/**"
+      ]
     },
     "prebuild": {},
     "lint": {},
